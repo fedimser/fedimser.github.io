@@ -1,0 +1,38 @@
+
+<head>
+    <title>Aztec Diamond Tiling</title>
+    <meta name="keywords" content="aztec, diamond, tiling">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.2/pixi.min.js"></script>
+    <script src="adt.js"></script>
+</head>
+<body onload="init()">
+    <div style="display:flex">
+        <canvas width="100" height="100" id="mainCanvas"
+                style="border: 1px solid">
+        </canvas>
+        <div style="padding: 4px">
+            <h3>Aztec Diamond Tiling</h3>
+            <p>Generates random tiling for Aztec Diamond</p>
+            <p>Inspired by <a href="https://www.youtube.com/watch?v=Yy7Q8IWNfHM">this video</a>.</p>
+            <p>Algorithm originally introduced in <a href="https://arxiv.org/abs/math/9801068">this paper</a>.</p>
+            <hr>
+            <p id="info"></p>
+            <hr>
+            <p id="pi-estimate"></p>
+            <hr>
+            <input type="checkbox" id="arrowsCb" name="arrowsCb" onclick="updateArrows();" checked>
+            <label for="arrowsCb">Arrows</label><br>
+            <br>
+            <input type="checkbox" id="animationCb" name="animationCb" checked>
+            <label for="animationCb">Animation</label><br>
+            <br>
+            <input type="button" onclick="reset();" value="Reset">
+            <br>
+            <input type="button" onclick="iteration(1);" value="Iteration">
+            <br>
+            <input type="button" onclick="iteration(10);" value="10 iterations">
+            <br>
+            <input type="button" onclick="startStop();" value="Auto/stop" id="startStop">
+        </div>
+    </div>
+</body>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>L-systems | Dmitriy Fedoriaka's Website</title>
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/ico">
+		
+		<meta charset="utf-8">
+		
+		<meta name="keywords" content="l-system, fractal">
+
+		<link rel="stylesheet" href="style/style.css">
+	</head>
+
+	<body background="img/0012.gif">
+		
+		<div id="header">
+			<table><tr>
+				<td id="pussContainer" width="120">
+					<a href="index.html" style="margin-right:10px;"> 
+                        <img id="pussImage" src="img/0100.png" width="150" height="120">
+                        <canvas id="pussCanvas" width='150' height='120' style="display:none;"></canvas>
+                    </a>
+				</td>
+				<td>
+					<h1 style="margin:0px;">Dmytro Fedoriaka</h1>
+					<p> 
+						<a class="chapter" href="index.html">About</a> |
+						<a class="chapter" href="games.html">Games</a> |
+						<a class="chapter" href="soft.html">Soft</a> |
+						<a class="chapter" href="science.html">Science</a> |
+						<a class="chapter" href="misc.html">Misc</a>
+					</p>
+				</td>
+			</tr></table>
+			<hr>
+		</div>
+		 
+		 
+		<div id="content">
+		
+			<h1 align="center">L-systems list</h1>
+			
+			<hr>
+			
+			<p><b>What is L-system?</b></p>
+			
+			<p>
+			It is fractal polyline. It is defined by an axiom (a string), rules of interplacing and an rotation angle.
+			</p>
+			
+			<p>
+			First, we need to take the axiom and make interplacings according to rules: for rule 'x > y' we replace all 'x' substrings of axiom with 'y'. We do it for several iterations and obtain a string, whch is a program for 'turtle'. The turtle crawls on the plane and leaves a trail. It can do following commands (they aren't common, but in the list below these commands are used):
+			</p>
+			
+			<ul>
+				<li>'F' - go forward (on constant length).</li>
+				<li>'b' - go forward without leaving a trail.</li>
+				<li>'+' - turn right on given rotation angle.</li>
+				<li>'-' - turn left on given rotation angle.</li>				
+			</ul>
+			
+			<p>All other symbols are ignored.</p>
+			
+			<p>More information on <a href="https://en.wikipedia.org/wiki/L-system">Wikipedia</a>.</p>
+			
+			<p><a href="http://www.kevs3d.co.uk/dev/lsystems/">L-systems online</a>.</p>
+			<hr>
+			
+			<center>
+			<table border="1"><tbody>
+			
+			<tr><td><img src="img/1050.png" alt="Koch's curve"></td><td><b>Koch's curve</b><br>Axiom: F<br>Rule: F &gt; F-F++F-F<br>Angle: 60<br><a href="http://fractalworld.xaoc.ru/Koch_curve">Koch's curve</a></td></tr>
+			
+			<tr><td><img src="img/1051.png" alt="Koch's snowflake"></td><td><b>Koch's snowflake</b><br>Axiom: F++F++F<br>Rule: F &gt; F-F++F-F<br>Angle: 60<br><a href="http://fractalworld.xaoc.ru/Koch_snowflake">Koch's snowflake</a><br></td></tr>
+
+			<tr><td><img src="img/1052.png" alt=""></td><td>Axiom: F+F+F<br>Rule: F &gt; F-F+F<br>Angle: 120 </td></tr>
+
+			<tr><td><img src="img/1053.png" alt=""></td><td>Axiom: F+F+F+F<br>Rule: F &gt; FF+F++F+F<br>Angle: 90<br><a href="http://fractalworld.xaoc.ru/Ice_fractal">Ice fractals</a> </td></tr>
+
+			<tr><td><img src="img/1054.png" alt="Кривая дракона"></td><td><b>Dragon curve</b><br>Axiom: FX<br>Rules:<br>X &gt; X+YF+<br>Y &gt; -FX-Y<br>Angle: 90<br><a href="http://fractalworld.xaoc.ru/Dragon_curve">Dragon curve</a> </td></tr>
+
+			<tr><td><img src="img/1055.png" alt=""></td><td><b>Gosper's curve</b><br>Axiom: XF<br>Rules:<br>X &gt; X+YF++YF-FX--FXFX-YF+<br>Y &gt; -FX+YFYF++YF+FX--FX-Y<br>Angle: 60<br><a href="http://fractalworld.xaoc.ru/Gosper_curve">Gosper's curve</a> </td></tr>
+
+			<tr><td><img src="img/1056.png" alt=""></td><td><b>Serpinski curve</b><br>Axiom: F+XF+F+XF<br>Rule:<br>X &gt; XF-F+F-XF+F+XF-F+F-X<br>Angle: 90 </td></tr>
+
+			<tr><td><img src="img/1057.png" alt=""></td><td><b>Gilbert's curve</b><br>Axiom: X<br>Rules:<br>X &gt; -YF+XFX+FY-<br>Y &gt; +XF-YFY-FX+<br>Angle: 90<br><a href="http://fractalworld.xaoc.ru/Hilbert_curve">Gilbert's curve</a></td></tr>
+
+			<tr><td><img src="img/1058.png" alt=""></td><td>Axiom: F+F+F+F<br>Rule: F &gt; FF+F+F+F+FF<br>Angle: 90 </td></tr>
+
+			<tr><td><img src="img/1059.png" alt=""></td><td>Axiom: F+F+F+F<br>Rule: F &gt; F+F-F-FF+F+F-F<br>Angle: 90<br><a href="http://fractalworld.xaoc.ru/Generalizations_of_Koch_curve">Generalizations of the Koch's curve</a><></td></tr>
+
+			<tr><td><img src="img/1061.png" alt=""></td><td>Axiom: F+F+F+F<br>Rule: F &gt; F+F-F-FFF+F+F-F<br>Angle: 90<br><a href="http://fractalworld.xaoc.ru/Generalizations_of_Koch_curve">Generalizations of the Koch's curve</a> </td></tr>
+
+			<tr><td><img src="img/1062.png" alt=""></td><td>Axiom: F+F+F+F<br>Rule: F &gt; F-FF+FF+F+F-F-FF+F+F-F-FF-FF+F<br>Angle: 90<br><a href="http://fractalworld.xaoc.ru/Generalizations_of_Koch_curve">Generalizations of the Koch's curve</a> </td></tr>
+
+			<tr><td><img src="img/1063.png" alt=""></td><td><b>Quadratic Snowflake</b> <br>Axiom: F<br>Rule: F &gt; F-F+F+F-F<br>Angle: 90 </td></tr>
+
+			<tr><td><img src="img/1064.png" alt=""></td><td>Axiom: YF<br>Rules:<br>X &gt; YF+XF+Y<br>Y &gt; XF-YF-X<br>Angle: 60 </td></tr>
+
+			<tr><td><img src="img/1065.png" alt=""></td><td>Axiom: F+F+F+F<br>Rule: F &gt; F+F-F+F+F<br>Angle: 90 </td></tr>
+
+			<tr><td><img src="img/1066.png" alt=""></td><td>Axiom: F+F+F+F<br>Rule: F &gt; FF+F+F+F+F+F-F<br>Angle: 90 </td></tr>
+
+			<tr><td><img src="img/1067.png" alt=""></td><td><b>A bush</b><br>Axiom: Y<br>Rules:<br>X &gt; X[-FFF][+FFF]FX<br>Y &gt; YFX[+Y][-Y]<br>Angle: &pi;/7</td></tr>
+
+			<tr><td><img src="img/1068.png" alt=""></td><td><b>A bush</b><br>Axiom: F<br>Rule: F &gt; FF+[+F-F-F]-[-F+F+F]<br>Angle: &pi;/8<br>P. Bourke <a href="http://local.wasp.uwa.edu.au/%7Epbourke/fractals/lsys_bush_b/">L-System Bush  </a></td></tr>
+
+			<tr><td><img src="img/1069.png" alt=""></td><td><b>A bush</b><br>Axiom: F<br>Rule: F &gt; F[+FF][-FF]F[-F][+F]F<br>Angle: &pi;/5 </td></tr>
+
+			<tr><td><img src="img/1070.png" alt=""></td><td><b>A bush</b><br>Axiom: X<br>Rules:<br>F &gt; FF<br>X &gt; F[+X]F[-X]+X<br>Angle: &pi;/9</td></tr>
+
+			<tr><td><img src="img/1071.png" alt=""></td><td><b>A bush</b><br>Axiom: F-F-F-F<br>Rule: F &gt; F-F+F+F-F<br>Angle: 90<br>MathWorld <a href="http://mathworld.wolfram.com/BoxFractal.html">Box Fractal  </a></td></tr>
+
+			<tr><td><img src="img/1072.png" alt=""></td><td><b>Сорняк</b><br>Axiom: F<br>Rule: F &gt; F[+F]F[-F]F<br>Angle: &pi;/7<br>Из <a href="http://dmitriyku.narod.ru/html/gallery_lfr.htm">галереи Дмитрия Зайкова  </a></td></tr>
+
+			<tr><td><img src="img/1073.png" alt=""></td><td>Axiom: F<br>Rules:<br>F &gt; FXF<br>X &gt; [-F+F+F]+F-F-F+<br>Angle: 60<br>Из <a href="http://dmitriyku.narod.ru/html/gallery_lfr.htm">галереи Дмитрия Зайкова  </a></td></tr>
+
+			<tr><td><img src="img/1074.png" alt=""></td><td><b>Serpinski triangle</b><br>Axiom: FXF--FF--FF<br>Rules:<br>F &gt; FF<br>X &gt; --FXF++FXF++FXF--<br>Angle: 60<br><a href="./Sierpinski_triangle">Serpinski triangle</a></td></tr>
+
+			<tr><td><img src="img/1075.png" alt=""></td><td><b>Serpinski carpet</b><br>Axiom: F<br>Rule: F &gt; FFF[+FFF+FFF+FFF]<br>Angle: 90°<br><a href="./Sierpinski_carpet">Serpinski carpet</a></td></tr>
+
+			<tr><td><img src="img/1076.png" alt=""></td><td><b>Мозаика</b><br>Axiom: F-F-F-F<br>Rules:<br>F &gt; F-b+FF-F-FF-Fb-FF+b-FF+F+FF+Fb+FFF<br>b &gt; bbbbbb<br>Angle: 90°<br>Здесь b означает переместиться вперёд на один шаг, не прорисовывая след.<br>Р. М. Кроновер, Фракталы и хаос динамических системах, стр. 36.</td></tr>
+
+			<tr><td><img src="img/1077.png" alt=""></td><td><b>Levy curve</b><br>Axiom: F++F++F++F<br>Rule: F &gt; -F++F-<br>Angle: 45°<br><a href="./Levy_curve">Кривая Леви</a><br><a href="http://en.wikipedia.org/wiki/L%C3%A9vy_C_curve">L&eacute;vy C curve  </a></td></tr>
+
+			<tr><td><img src="img/1078.png" alt=""></td><td>Axiom: F++F++F++F++F<br>Rule: F &gt; F++F++F+++++F-F++F<br>Angle: 36°<br>P. Bourke <a href="http://local.wasp.uwa.edu.au/%7Epbourke/fractals/pentaplexity/">Pentaplexity  </a></td></tr>
+
+			<tr><td><img src="img/1079.png" alt=""></td><td>Axiom: F<br>Rule: F &gt; F+F-F<br>Angle: 120°<br>William McWorter <a href="http://www.nahee.com/spanky/pub/fractals/lsystems/mcworter.l">Terdragon  </a></td></tr>
+
+			<tr><td><img src="img/1080.png" alt=""></td><td><b>Sier&pi;nski Carpet </b><br>Axiom: F<br>Rules: <br>F &gt; F+F-F-F-b+F+F+F-F<br>b &gt; bbb<br>Angle: 90°<br>Здесь b означает переместиться вперёд на один шаг, не прорисовывая след.<br>William McWorter <a href="http://www.nahee.com/spanky/pub/fractals/lsystems/mcworter.l">Sier&pi;nski Carpet  </a><br><a href="./Sier&pi;nski_carpet">Ковёр Серпинского</a></td></tr>
+
+			<tr><td><img src="img/1081.png" alt=""></td><td>Axiom: F-F-F-F-F<br>Rule: F &gt; F-F++F+F-F-F<br>Angle: 72°<br>William McWorter <a href="http://www.nahee.com/spanky/pub/fractals/lsystems/mcworter.l">Pentigree  </a><br></td></tr>
+
+			<tr><td><img src="img/1082.png" alt=""></td><td>Axiom: X<br>Rules: <br>F &gt; <br>X &gt; -F++F-X-F--F+Y---F--F+Y+F++F-X+++F++F-X-F++F-X+++F--F+Y--<br>Y &gt; +F++F-X-F--F+Y+F--F+Y---F--F+Y---F++F-X+++F++F-X+++F--F+Y<br>Angle: 30°<br>Gary Teachout <a href="http://www.nahee.com/spanky/pub/fractals/lsystems/teachout.l">Hex-7-b  </a><br></td></tr>
+
+			<tr><td><img src="img/1083.png" alt=""></td><td>Axiom: FX<br>Rules: <br>F &gt; <br>X &gt; FX-FY-FX+FY+FX+FY+FX+FY+FX-FY-FX-FY-FX-FY-FX+FY+FX<br>Y &gt; FY<br>Angle: 45°<br>Gary Teachout <a href="http://www.nahee.com/spanky/pub/fractals/lsystems/teachout.l">Peano-c  </a><br></td></tr>
+
+			<tr><td><img src="img/1084.png" alt=""></td><td>Axiom: XYXYXYX+?XYXYXYX+?XYXYXYX+?XYXYXYX<br>Rules: <br>F &gt; <br>X &gt; FX+FX+FXFY-FY-<br>Y &gt; +FX+FXFY-FY-FY<br>Angle: 90°<br>William McWorter <a href="http://www.nahee.com/spanky/pub/fractals/lsystems/mcworter.l">Border1  </a><br></td></tr>
+
+			<tr><td><img src="img/1085.png" alt=""></td><td>Axiom: F--F--F--F--F--F<br>Rule: F &gt; -F[--F--F]++F--F+<br>Angle: 30°<br>Adrian Mariano <a href="http://www.nahee.com/spanky/pub/fractals/lsystems/mcworter.l">Doily  </a><br></td></tr>
+
+			<tr><td><img src="img/1086.png" alt=""></td><td>Axiom: F+F+F<br>Rule: F &gt; F+FF-F<br>Angle: 120°<br>William McWorter <a href="http://www.nahee.com/spanky/pub/fractals/lsystems/mcworter.l">Maze01  </a><br></td></tr>
+
+			<tr><td><img src="img/1087.png" alt=""></td><td>Axiom: X<br>Rules: <br>F &gt; <br>X &gt; FY+FYFY-FY<br>Y &gt; FX-FXFX+FX<br>Angle: 120°<br>William McWorter <a href="http://www.nahee.com/spanky/pub/fractals/lsystems/mcworter.l">Maze&amp;Fractal1  </a><br></td></tr>
+
+			<tr><td><img src="img/1088.png" alt=""></td><td>Axiom: X<br>Rules: <br>F &gt; <br>X &gt; FX+FX+FXFYFX+FXFY-FY-FY-<br>Y &gt; +FX+FX+FXFY-FYFXFY-FY-FY<br>Angle: 90°<br>William McWorter <a href="http://www.nahee.com/spanky/pub/fractals/lsystems/mcworter.l">Moore  </a><br></td></tr>
+
+			<tr><td><img src="img/1089.png" alt=""></td><td>Axiom: X-X-X-X-X<br>Rules: <br>F &gt; <br>X &gt; FX-FX-FX+FY+FY+FX-FX<br>Y &gt; FY+FY-FX-FX-FY+FY+FY<br>Angle: 72°<br>William McWorter <a href="http://www.nahee.com/spanky/pub/fractals/lsystems/mcworter.l">Pentant  </a><br></td></tr>
+
+			<tr><td><img src="img/1090.png" alt=""></td><td>Axiom: F-F-F-F-F<br>Rule: F &gt; F-F-F++F+F-F<br>Angle: 72°<br>William McWorter <a href="http://www.nahee.com/spanky/pub/fractals/lsystems/mcworter.l">Pentl  </a><br></td></tr>
+
+			<tr><td><img src="img/1091.png" alt=""></td><td>Axiom: L--F--L--F<br>Rules: <br>L &gt; +R-F-R+<br>R &gt; -L+F+L-<br>Angle: 45°<br>William McWorter <a href="http://www.nahee.com/spanky/pub/fractals/lsystems/mcworter.l">Sier&pi;nsk  </a><br></td></tr>
+
+			<tr><td><img src="img/1092.png" alt=""></td><td>Axiom: X<br>Rules: <br>X &gt; F-F-F+F+FX++F-F-F+F+FX--F-F-F+F+FX<br>F &gt; <br>Angle: 60°<br>William McWorter <a href="http://www.nahee.com/spanky/pub/fractals/lsystems/mcworter.l">Tiling1  </a><br></td></tr>
+
+			<tr><td><img src="img/1093.png" alt=""></td><td>Axiom: F++++F<br>Rule: F &gt; F+F+F++++F+F+F<br>Angle: 45°<br>Anthony Hanmer <a href="http://www.nahee.com/spanky/pub/fractals/lsystems/horizons.l">ADH231a  </a><br></td></tr>
+
+			<tr><td><img src="img/1094.png" alt=""></td><td>Axiom: F+F+F+F++F-F-F-F<br>Rule: F &gt; F+F++F+FF<br>Angle: 90°<br>Anthony Hanmer <a href="http://www.nahee.com/spanky/pub/fractals/lsystems/horizons.l">ADH256a  </a><br></td></tr>
+
+			<tr><td><img src="img/1095.png" alt=""></td><td>Axiom: F++F++F+++F--F--F<br>Rule: F &gt; FF++F++F++FFF<br>Angle: 60°<br>Anthony Hanmer <a href="http://www.nahee.com/spanky/pub/fractals/lsystems/horizons.l">ADH258a  </a><br></td></tr>
+			
+			</tbody></table></center><p>
+			
+			
+			<hr>
+			
+			<p>Materials from the site fractalworld.xaoc.ru were used (site doesn't exist anymore).</p>
+			
+			<td valign="top">
+		
+		
+		
+		 
+		<div id="footer">
+			<hr>
+			<p align="center">
+				&copy; Dmytro Fedoriaka, 2010-<span id="curyear">2017</span>
+			</p> 
+			<script src="js/puss.js" type="text/javascript"></script>
+		</div>
+	 
+		
+	
+
+
+</td></div></body></html>

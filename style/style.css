@@ -1,0 +1,13 @@
+.upd {
+  color: gray;
+  font-size: 60%;
+}
+
+.note {
+  font-style: italic;
+  font-size: 90%;
+}
+
+.chapter-current {
+  font-weight: bold;
+}
