@@ -242,8 +242,8 @@ class NonogramGUI {
 		
 		var inp = document.createElement("input");
 		inp.type = "number";
-		inp.minimum = 0;
-		inp.maximum = 100;
+		inp.setAttribute("min", 0);
+		inp.setAttribute("max", 100);
 		inp.value = defaultValue;
 		inp.style.width="50px";
 		inp.caller = this;
