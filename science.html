@@ -49,10 +49,25 @@
 		</p>
 		<hr>
 
-		<h3><b>Binary Tree Elimination algorithm for computing marginal probabilities in graphical models</b> (2022)</b> </h3>
+		<h3><b>New Circuit for Quantum Adder by Constant</b> (2025)</b> </h3>
 		<p>
 			<b>Abstract. </b>
-			We propose a method to efficiently compute marginal probabilities for a probabilistic graphical model. This method can be built on top of any elimination algorithm for computing partition function and is significantly more efficient and accurate then the trivial reduction. We show how to apply this technique to three elimination algorithms: Bucket Elimination, Mini-Bucket Elimination and Mini-Bucket Renormalization.
+			We propose a new circuit for in-place addition of a classical n-bit constant to a quantum n-qubit integer
+			modulo 2n. Our circuit uses n-3 ancilla qubits and has a T-count of 4n−5.
+			We also propose controlled version of this circuit that uses n-2 ancillas and has a T-count of 11n-15.
+			We implement these circuits in Q#.
+		</p>
+		<p>Link: <a href="https://arxiv.org/abs/2501.06648">arxiv</a>.</p>
+		<hr>
+
+		<h3><b>Binary Tree Elimination algorithm for computing marginal probabilities in graphical models</b> (2022)</b>
+		</h3>
+		<p>
+			<b>Abstract. </b>
+			We propose a method to efficiently compute marginal probabilities for a probabilistic graphical model. This
+			method can be built on top of any elimination algorithm for computing partition function and is
+			significantly more efficient and accurate then the trivial reduction. We show how to apply this technique to
+			three elimination algorithms: Bucket Elimination, Mini-Bucket Elimination and Mini-Bucket Renormalization.
 		</p>
 		<p>Link: <a href="http://dx.doi.org/10.13140/RG.2.2.26247.06568">paper</a>.</p>
 		<hr>
@@ -64,7 +79,9 @@
 			quantum circuit (there are 22 such rules).
 			For every such rule we present quantum circuit implementing it with O(N) gates.
 		</p>
-		<p>Link: <a href="http://dx.doi.org/10.13140/RG.2.2.22346.08641">paper</a>.</p>
+		<p>Links: <a href="https://arxiv.org/abs/2501.06648">arxiv</a>,
+			<a href="https://github.com/fedimser/quant_comp/tree/master/cellular_automata">code</a>.
+		</p>
 		<hr>
 
 		<h3><b>Decomposition of unitary matrix into quantum gates (2019)</b></h3>
@@ -76,18 +93,14 @@
 		</p>
 
 		<p>
-			This is a course project on online course
+			This was a course project on online course
 			"<a href="https://courses.edx.org/courses/course-v1:MITx+8.06x+1T2019/course/">8.06x - Application of
-				Quantum Mechanics</a>" at MIT.
-		</p>
-		<p>Published in <a
+				Quantum Mechanics</a>" at MIT. Published in <a
 				href="https://prod-edxapp.edx-cdn.org/assets/courseware/v1/321087d9bab0fdcbb36a04812f9d9b84/asset-v1:MITx+8.06x+1T2019+type@asset+block/term_papers_2019.pdf">8.06x
-				Physical Review</a>
-			(compilation of all papers written by students at that course).</p>
+				Physical Review</a>.</p>
 		<p>
 			Links:
-			<a
-				href="https://github.com/fedimser/quantum_decomp/raw/master/res/Fedoriaka2019Decomposition.pdf">paper</a>,
+			<a href="https://arxiv.org/abs/2501.07786">arxiv</a>,
 			<a href="https://github.com/fedimser/quantum_decomp">code</a>.
 		</p>
 		<hr>
@@ -100,7 +113,7 @@
 			(e.g. probabilistic algorithms),
 			and yet to be maximally rigorous. They also include 15 problems.
 		</p>
-		<p>Link: <a href="download/articles/Fedoriaka2017Probability.pdf">pdf</a>.</p>
+		<p>Link: <a href="download/articles/Fedoriaka2017Probability.pdf">paper</a> (in Russian).</p>
 		<hr>
 
 		<h3><b>Ising Model simulation</b> (2017, Course project)</b> </h3>
@@ -110,9 +123,9 @@
 			<a href="https://en.wikipedia.org/wiki/Square-lattice_Ising_model">Ising model</a>
 			in zero outer field and compare it with theoretical.
 			Also I do modelling with CUDA and analyze how modelling error decreases with increase of lattice size.
+			<a href="download/articles/Fedoriaka2017IsingModelSimulation.html">Report (html)</a>,
+			<a href="download/articles/Fedoriaka2017IsingModelSimulation.zip">Code+Data</a>.
 		</p>
-		<a href="download/articles/Fedoriaka2017IsingModelSimulation.html">Report (html)</a>,
-		<a href="download/articles/Fedoriaka2017IsingModelSimulation.zip">Code+Data</a>.
 		<hr>
 
 		<h3><b>Topic models interactive visualization technology</b> (2017, B. Sc. Thesis)</h3>
@@ -128,30 +141,21 @@
 			Also we describe informational system <a href="https://github.com/bigartm/visartm">VisARTM</a>,
 			which is designed for automated creation and visualization of topic models.
 		</p>
-		<p><b>Keywords:</b> Topic Modeling, Visualization.</p>
+
+		<p>Advisor: <a href="https://scholar.google.ru/citations?user=KIW4fnsAAAAJ&hl=en">Konstantin Vorontsov</a>.
+			Defended on 29.06.2017 at <a href="https://en.wikipedia.org/wiki/Dorodnitsyn_Computing_Centre">Dorodnitsyn
+				Computing Centre</a>.
+		</p>
 
 		<p>
-		<p>
 			Links:
-			<a href="download/articles/Fedoriaka2017BSThesis.pdf">paper</a>
-			(<a
-				href="http://svn.code.sf.net/p/mlalgorithms/code/Group374/Fedoriaka2017TopicModelsVisualization/BsThesis/Fedoriaka2017BSThesis.pdf">mirror</a>),
-			<a href="download/articles/Fedoriaka2017BSPresentation.pdf">slides</a>
-			(<a
-				href="http://svn.code.sf.net/p/mlalgorithms/code/Group374/Fedoriaka2017TopicModelsVisualization/BsThesis/Fedoriaka2017BSPresentation.pdf">mirror</a>),
+			<a href="download/articles/Fedoriaka2017BSThesis.pdf">thesis</a> (in Russian),
+			<a
+				href="http://svn.code.sf.net/p/mlalgorithms/code/Group374/Fedoriaka2017TopicModelsVisualization/BsThesis/Fedoriaka2017BSThesis.pdf">mirror</a>,
+			<a href="download/articles/Fedoriaka2017BSPresentation.pdf">slides</a>,
 			<a href="https://github.com/bigartm/visartm">code</a>.
 		</p>
 
-		<p>Scientific advisor: Konstantin Vorontsov</p>
-
-		<p>Defended on 29.06.2017 in <a href="http://www.ccas.ru/index-e.htm">CCAS</a>.
-
-		<p>
-			03.05.2017 - Report on BigARTM seminar.
-			<a href="download/articles/Fedoriaka2017TopicModelsVisualization">Slides</a>
-			(<a
-				href="http://svn.code.sf.net/p/mlalgorithms/code/Group374/Fedoriaka2017TopicModelsVisualization/030517Pres/Fedoriaka2017TopicSpectrum.pdf">mirror</a>)
-		</p>
 
 		<hr>
 
@@ -165,7 +169,6 @@
 			hierarchic topic models visualization. It introduces concept of tree visualization with polygons.
 			Also it considers problems of quality measuring and representation of additional information. This article
 			also describes implementation of visualization algorithms with usage of BigARTM topic modeling library.</p>
-		<p><b>Keywords:</b> Topic Modeling, Visualization, BigARTM.</p>
 
 		Links:
 		<a href="download/articles/Fedoryaka2016TopicModelVisualization.pdf">paper</a>,
@@ -176,7 +179,6 @@
 		<hr>
 
 		<h3><b>Mixtures of models of vector autoregression in the problem of time series forecasting</b> (2016)</h3>
-		<p>Fedoriaka D.S., Neychev R.G., Strijov V.V.</p>
 
 		<p>
 			<b>Abstract.</b> In this paper we investigate the problem of short-term time series forecasting. We consider
@@ -188,20 +190,14 @@
 			forecast energy consumption in Turkey and Poland and spot prices on electricty in Germany.
 		</p>
 
-		<p><b>Keywords:</b> time series, forecasting, autoregression, linear regression, boosting, AdaBoost, bagging,
-			mixture of experts.</p>
-
-		<p>Language: Russian.</p>
-		<p>Unpublished.</p>
 		<p>
-
 			Links:
-			<a href="download/articles/Fedoriaka2016TimeSeriesPrediction.pdf">paper</a>
-			(<a
-				href="http://svn.code.sf.net/p/mlalgorithms/code/Group374/Fedoriaka2016TimeSeriesPrediction/doc/Fedoriaka2016TimeSeriesPrediction.pdf">mirror</a>),
-			<a href="download/articles/Fedoriaka2016TSPPresentation.pdf">slides</a>
-			(<a
-				href="http://svn.code.sf.net/p/mlalgorithms/code/Group374/Fedoriaka2016TimeSeriesPrediction/doc/Fedoriaka2016TSPPresentation.pdf">mirror</a>),
+			<a
+				href="https://www.researchgate.net/publication/312094615_Mixtures_of_models_of_vector_autoregression_in_the_problem_of_time_series_forecasting">paper</a>
+			(in Russian),
+			<a href="download/articles/Fedoriaka2016TimeSeriesPrediction.pdf">mirror1</a>, <a
+				href="http://svn.code.sf.net/p/mlalgorithms/code/Group374/Fedoriaka2016TimeSeriesPrediction/doc/Fedoriaka2016TimeSeriesPrediction.pdf">mirror2</a>,
+			<a href="download/articles/Fedoriaka2016TSPPresentation.pdf">slides</a>,
 			<a
 				href="http://svn.code.sf.net/p/mlalgorithms/code/Group374/Fedoriaka2016TimeSeriesPrediction/code">code</a>.
 		</p>
@@ -210,9 +206,6 @@
 
 		<h3><b>Computer modelling in application to city traffic</b> (2013)</h3>
 
-
-		<p>Fedoriaka D.S., Entin J.A.</p>
-
 		<p>
 			<b>Abstract.</b> Model of traffic in a big sity is developed.
 			We consider: 1)one- and bideirected movement, 2)intersections, 3)basic requirements of traffic safety. We
@@ -220,25 +213,15 @@
 			created project with usage of object-oriented programming.
 		</p>
 
-		<p><b>Keywords:</b> computer simulation, automobile traffic in bigcities, automobiles, roads, buildings,
-			crosses,
-			transport streams optimization</p>
 
-
-		<p>Language: Ukrainian.</p>
-		<p>Unpublished.</p>
 		<p>Links:
-			<a href="download/articles/CityModelling2013.pdf">paper</a>,
-			<a href="virtualcity.html">program</a>,
-			<a href="https://www.youtube.com/watch?v=Uyao9n8iLWk">video</a>.
+			<a href="download/articles/CityModelling2013.pdf">paper</a> (in Ukrainian),
+			<a href="virtualcity.html">program</a>.
 		</p>
 
 		<hr>
 
 		<h3><b>Percolation phenomenon in cellular automata</b> (2012)</h3>
-
-		<p>Fedoriaka D.S., Entin J.A.</p>
-
 		<p>
 			<b>Abstract</b>. In this paper, we investigate synchronous cellular automata, similar to the 'Game of Life'.
 			We study the phenomenon of percolation &mdash; abrupt filling of all cells during evolution from random
@@ -247,23 +230,14 @@
 			parameters of the automata.
 		</p>
 
-		<p><b>Keywords:</b> cellular automata, percolation.</p>
-
-		<p>Language: Ukrainian.</p>
-		<p>Unpublished.</p>
 		<p>
-			Links: <a href="download/articles/Percolation2012.pdf">paper</a>
+			Link: <a href="download/articles/Percolation2012.pdf">paper</a> (in Ukrainian).
 		</p>
 
 		<hr>
 
-
-
-
 		<h3><b>Modelling and research of the Game of Life and its modifications on triangle, squared and hexagonal
 				grids</b> (2011)</h3>
-
-		<p>Fedoriaka D.S., Entin J.A.</p>
 
 		<p>
 			<b>Abstract</b>.
@@ -272,16 +246,11 @@
 			conditions.
 		</p>
 
-		<p><b>Keywords:</b> computer simulation, counters, counters colonies, counters population, evolution,
-			two-dimension lattices, rectilinear triangles and hexagons, counters initial configurations and survival
-			conditions.</p>
 
-
-		<p>Language: Ukrainian.</p>
 		<p>Published in "Mathematics. Informatics. Physics." (the scientific magazine of Dnipropetrovsk Liceum
 			of Informational Technology), Vol.2 .</p>
 		<p>Links:
-			<a href="download/articles/LifeGame2011.pdf">paper</a>,
+			<a href="download/articles/LifeGame2011.pdf">paper</a> (in Ukrainian),
 			<a href="lifegame.html">program</a>.
 		</p>
 
@@ -289,19 +258,10 @@
 
 	</div>
 
-	<hr>
-
-	Find me in scientific networks:
-
-	<ul>
-		<li><a href="http://www.researcherid.com/rid/J-4111-2016">ResearcherID</a></li>
-		<li><a href="http://orcid.org/0000-0002-4962-854X">ORCID</a></li>
-	</ul>
-
 	<div id="footer">
 		<hr>
 		<p align="center">
-			&copy; Dmytro Fedoriaka, 2010-<span id="curyear">2017</span>
+			&copy; Dmytro Fedoriaka, 2010-<span id="curyear">2025</span>
 		</p>
 		<script src="js/puss.js" type="text/javascript"></script>
 	</div>
