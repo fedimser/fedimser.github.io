@@ -2,18 +2,19 @@
 <html>
 
 	<head>
-		<title>The Antiaircrafter Game | Dmitriy Fedoriaka's Website</title>
+		<title>Codeforces solutions in rare languages</title>
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/ico">
-		
+
 		<meta charset="utf-8">
-		
-		<meta name="keywords" content="игра, зенитчик, antiaircrafter, game, flash, Fedoriaka, Федоряка">
+
+		<meta name="keywords" content="codeforces, api, solutions, languages, rust, java, javascript">
 
 		<link rel="stylesheet" href="style/style.css">
+		<script src="js/cf-rare-langs.js"></script>
 	</head>
 
 	<body background="img/0012.gif">
-		
+
 		<div id="header">
 			<table><tr>
 				<td id="pussContainer" width="120">
@@ -23,7 +24,7 @@
                     </a>
 				</td>
 				<td>
-					<h1 style="margin:0px;">Dmytro Fedoriaka</h1>
+					<h1 style="margin:0px;">Dima Fedoriaka</h1>
 					<p> 
 						<a class="chapter" href="index.html">About</a> |
 						<a class="chapter" href="games.html">Games</a> |
@@ -35,31 +36,38 @@
 			</tr></table>
 			<hr>
 		</div>
-		 
-		 
+
+
 		<div id="content">
-			<p><b>The Antiaircrafter Game</b></p>
-		
-			<p>The goal is to launch rockets in order to destroy planers and avoid bombs.</p>
-	 
-			<p>Language: Russian</p>
-			
-			<a href="download/flash/Planers.rar">Download</a>
-			
-			<div style="text-align: center;"><embed align="" bgcolor="" height="400" loop="true" play="true" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" quality="high" src="download/flash/Planers.swf" style="font-size: 8pt;" width="560" wmode="Opaque"></div>
-			
-			<p class="upd">Last update: 03.12.2015</p>
+			<h2>Codeforces solutions in rare languages</h2>
+
+			<p>Select problem and language and get all successful submissions in given language!</p>
+
+			<form>
+				<label for="select-problem">Problem:</label>
+			  	<select id="select-problem" name="select-problem">
+			  	</select>
+				<br>
+
+			  	<label for="lang-dropdown">Language:</label>
+			  	<select id="lang-dropdown" name="lang-dropdown">
+			  	</select>
+			</form>
+
+			<table id="table-subms">
+			</table>
+
 		</div>
-		 
+
 		<div id="footer">
 			<hr>
 			<p align="center">
-				&copy; Dmytro Fedoriaka, 2010-<span id="curyear">2017</span>
+				&copy; Dima Fedoriaka, 2010-<span id="curyear">2017</span>
 			</p> 
 			<script src="js/puss.js" type="text/javascript"></script>
 		</div>
-	 
-		
+
+
 	</body>
 
 </html>

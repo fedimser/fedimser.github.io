@@ -30,7 +30,7 @@ class SiteChecker:
         used_images = {'img/0012.gif', 'img/0103.png', 'img/favicon.ico'}
         for page in self.pages_to_check:
             soup = BeautifulSoup(open(page, 'r').read(), 'html.parser')
-            for img in soup.findAll('img'):
+            for img in soup.find_all('img'):
                 src = img["src"]
                 used_images.add(src)
                 if not src in stored_images:
