@@ -11790,25 +11790,25 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="1.-Ising-Model">1. Ising Model<a class="anchor-link" href="#1.-Ising-Model">&#182;</a></h1><p>In this work we will consider Ising model on isotropic square lattice in zero external field.
-It's lattice $S$ of size $N \times N$, each element of which can be either 1 or -1 (i.e. $S \in \{-1,1\}^{N \times N}$).
-Energy of this lattice is given by formula:</p>
-$$E = -J \sum_{i=0}^{N-1}  \sum_{j=0}^{N-1} S_{i,j} (S_{i,j+1} + S_{i+1,j}).$$<p>We will consider periodical border condition: here and further we assume that indices of lattice belongs to $\mathbb{Z}_{N}$, which means that $0 \equiv N$.</p>
-<p>When $N \to \infty$, behaviour of this lattice tends to behaviour of Ising model on infinite lattice, which is well studied.</p>
+<h1 id="1.-Ising-Model">1. Ising Model<a class="anchor-link" href="#1.-Ising-Model">&#182;</a></h1><p>In this work we will consider the Ising model on an isotropic square lattice in zero external field.
+It's a lattice $S$ of size $N \times N$, each element of which can be either 1 or -1 (i.e. $S \in \{-1,1\}^{N \times N}$).
+The energy of this lattice is given by the formula:</p>
+$$E = -J \sum_{i=0}^{N-1}  \sum_{j=0}^{N-1} S_{i,j} (S_{i,j+1} + S_{i+1,j}).$$<p>We will consider periodic boundary conditions: here and below we assume that indices of the lattice belong to $\mathbb{Z}_{N}$, which means that $0 \equiv N$.</p>
+<p>When $N \to \infty$, the behaviour of this lattice tends to the behaviour of the Ising model on an infinite lattice, which is well studied.</p>
 <p>We will focus on two main parameters: energy per site:</p>
 $$E_1 = -\frac{J}{N^2}\sum_{i=0}^{N-1}  \sum_{j=0}^{N-1} S_{i,j} (S_{i,j+1} + S_{i+1,j}),$$<p>and magnetization:</p>
 $$m = \Bigg| \frac{1}{N^2}\sum_{i=0}^{N-1}  \sum_{j=0}^{N-1} S_{i,j} \Bigg|.$$<p>From theory we know that</p>
 $$E_1(T) = -J \coth \big(\frac{2J}{T} \big) \Bigg[1 + \frac{2}{\pi} \Big(2 \tanh^2 \big(\frac{2J}{T}-1 \big)  \Big) 
-\int_{0}^{\pi/2} \frac{1}{\sqrt{1-4k(1+k^2)^{-2} sin^2 \theta}} d\theta \Bigg].$$<p>There is two cases: feromagnetic ($J>0$) and paramegnetic ($J<0$).</p>
-<p>In feromagnetic case there is phase transition and magnetization is given by formula:</p>
+\int_{0}^{\pi/2} \frac{1}{\sqrt{1-4k(1+k^2)^{-2} sin^2 \theta}} d\theta \Bigg].$$<p>There are two cases: ferromagnetic ($J>0$) and paramagnetic ($J<0$).</p>
+<p>In the ferromagnetic case there is a phase transition and magnetization is given by the formula:</p>
 $$m(T) = \begin{cases}
 \Big(1 - \frac{1}{\text{sh}^{-4}(\frac{2J}{T})} \Big)^{1/8}, T < T_c, \\
 0, T > T_c;
 \end{cases}
 $$<p>where $T_c = \frac{J}{\text{arcth}(\sqrt{2}-1)} = \frac{2J}{\log(1+\sqrt{2})} \approx 2.269J$ - critical temperature (Curie temperature).</p>
-<p>In paramagnetic case there is no spontaneous magnetization, i.e. $m(T) \equiv 0$.</p>
-<p>We can see that only ratio $T/J$ matters, so from now on we will consider only cases $J=1$ and $J=-1$.</p>
-<p>Note. Case $J=0$ is trivial, because there is no interaction at all and $E=0, m=0$.</p>
+<p>In the paramagnetic case there is no spontaneous magnetization, i.e. $m(T) \equiv 0$.</p>
+<p>We can see that only the ratio $T/J$ matters, so from now on we will consider only the cases $J=1$ and $J=-1$.</p>
+<p>Note. The case $J=0$ is trivial, because there is no interaction at all and $E=0, m=0$.</p>
 <p>First of all, let's calculate theoretical results.</p>
 
 </div>
@@ -12240,26 +12240,26 @@ iYkKh4iIxESFQ0REYvL/ATP7rt4W1DLZAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="2.-Modelling-approach">2. Modelling approach<a class="anchor-link" href="#2.-Modelling-approach">&#182;</a></h1><p>We will use Monte-Carlo method for modelling.</p>
-<p>We will choose arbitrary element (with equal probability) and try to change its sign. Then we will calculate how energy changes from that action, and what is probability of such transition according to Bolzmann distribution.</p>
-<p>So, let's assume that we have chosen element $(i,j)$. Let's denote energy of all system without this site $E_0$. Then energy before possible sig change is</p>
-$$E_{old} = E_0 -J S_{i,j} (S_{i,j-1} +S_{i,j+1}, S_{i-1,j}, S_{i+1,j}),$$<p>and energy after energy change is</p>
-$$E_{new} = E_0 +J S_{i,j} (S_{i,j-1} +S_{i,j+1}, S_{i-1,j}, S_{i+1,j}),$$<p>According to Bolzmann distribution, probability of state with energy $E$ is $Z^{-1} e^{-\frac{E}{T}}$. In our case there is only two states, so partition function $Z = E_{old} + E_{new}$, and probability of sign  change is:</p>
+<h1 id="2.-Modelling-approach">2. Modelling approach<a class="anchor-link" href="#2.-Modelling-approach">&#182;</a></h1><p>We will use the Monte Carlo method for modelling.</p>
+<p>We will choose an arbitrary element (with equal probability) and try to change its sign. Then we will calculate how energy changes from that action, and what the probability of such a transition is according to the Boltzmann distribution.</p>
+<p>So, let's assume that we have chosen element $(i,j)$. Let's denote the energy of the whole system without this site by $E_0$. Then the energy before a possible sign change is</p>
+$$E_{old} = E_0 -J S_{i,j} (S_{i,j-1} +S_{i,j+1}, S_{i-1,j}, S_{i+1,j}),$$<p>and the energy after the sign change is</p>
+$$E_{new} = E_0 +J S_{i,j} (S_{i,j-1} +S_{i,j+1}, S_{i-1,j}, S_{i+1,j}),$$<p>According to the Boltzmann distribution, the probability of a state with energy $E$ is $Z^{-1} e^{-\frac{E}{T}}$. In our case there are only two states, so the partition function is $Z = E_{old} + E_{new}$, and the probability of a sign change is:</p>
 $$p = \frac{e^{-\frac{E_{new}}{T}}}{e^{-\frac{E_{new}}{T}}+e^{-\frac{E_{old}}{T}}} = 
 \frac{1}{1+e^{\frac{E_{new}-E_{old}}{T}}} = \frac{1}{1+e^{2J \Delta S /T}},$$<p>where $\Delta S = S_{i,j} (S_{i,j-1} +S_{i,j+1}+ S_{i-1,j}+ S_{i+1,j})$.</p>
-<p>So, step of modelling is:</p>
+<p>So, a step of modelling is:</p>
 <ol>
-<li><p>Choose random (i,j);</p>
+<li><p>Choose a random (i,j);</p>
 </li>
 <li><p>Calculate $\Delta S = S_{i,j} (S_{i,j-1} +S_{i,j+1} + S_{i-1,j} + S_{i+1,j})$;</p>
 </li>
 <li><p>Select uniformly $x \in [0,1]$;</p>
 </li>
-<li><p>If $x < \frac{1}{1+e^{2J \Delta S/T}}$, multiply $S_{i,j}$ on -1.</p>
+<li><p>If $x < \frac{1}{1+e^{2J \Delta S/T}}$, multiply $S_{i,j}$ by -1.</p>
 </li>
 </ol>
-<p>Let's notice that $\Delta S$ can take only integer values between $-4$ and $4$. It means we can for given temperatre calculate array of probabilities in advance, and don't do any floating-point operations during modelling.</p>
-<p><strong>Modelling schedule</strong>. We will perform simulated anneling: set big temperture (big enough to neglect interaction between elements), then slowly lower it. For each given temperature we will perform several groups of iterations. After each series we will calculate energy andmagnetization, and then average them.</p>
+<p>Let's notice that $\Delta S$ can take only integer values between $-4$ and $4$. It means we can, for a given temperature, calculate an array of probabilities in advance and avoid any floating-point operations during modelling.</p>
+<p><strong>Modelling schedule</strong>. We will perform simulated annealing: set a high temperature (high enough to neglect interaction between elements), then slowly lower it. For each given temperature we will perform several groups of iterations. After each series we will calculate energy and magnetization, and then average them.</p>
 
 </div>
 </div>
@@ -12269,7 +12269,7 @@ $$p = \frac{e^{-\frac{E_{new}}{T}}}{e^{-\frac{E_{new}}{T}}+e^{-\frac{E_{old}}{T}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="3.-Modelling-of-feromagnetic-and-paramagnetic">3. Modelling of feromagnetic and paramagnetic<a class="anchor-link" href="#3.-Modelling-of-feromagnetic-and-paramagnetic">&#182;</a></h1>
+<h1 id="3.-Modelling-of-feromagnetic-and-paramagnetic">3. Modelling of ferromagnetic and paramagnetic cases<a class="anchor-link" href="#3.-Modelling-of-feromagnetic-and-paramagnetic">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -12278,8 +12278,8 @@ $$p = \frac{e^{-\frac{E_{new}}{T}}}{e^{-\frac{E_{new}}{T}}+e^{-\frac{E_{old}}{T}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Let's model feromagnetic ($J=1$) and paramagnetic ($J=-1$) with N=100 and following schedule: 200 steps (from $T=10$ to $T=0.05$ with step $0.05$). For each step we do $10^6$ iterations, and repeat it 10 times. This makes $2 \cdot 10^9$ iterations in total.</p>
-<p>We will use C program (see ising.c). It reads from standart input N,J. Then it reads schedule in triples: $T, c_1, c_2$, where T is temperature, $c_1$ is number of iterations in group, $c_2$ is number of groups.</p>
+<p>Let's model the ferromagnetic ($J=1$) and paramagnetic ($J=-1$) cases with N=100 and the following schedule: 200 steps (from $T=10$ to $T=0.05$ with a step of $0.05$). For each step we do $10^6$ iterations, and repeat this 10 times. This makes $2 \cdot 10^9$ iterations in total.</p>
+<p>We will use a C program (see ising.c). It reads N,J from standard input. Then it reads the schedule in triples: $T, c_1, c_2$, where T is temperature, $c_1$ is the number of iterations in a group, and $c_2$ is the number of groups.</p>
 <p>Let's plot experimental data on the same chart with theoretical data.</p>
 
 </div>
@@ -12349,7 +12349,7 @@ $$p = \frac{e^{-\frac{E_{new}}{T}}}{e^{-\frac{E_{new}}{T}}+e^{-\frac{E_{old}}{T}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Feromagnetic ($J=1$).</p>
+<p>Ferromagnetic ($J=1$).</p>
 
 </div>
 </div>
@@ -13461,7 +13461,7 @@ IiIiIiLSCynZExERERER6YWU7ImIiIiIiPRC/x/rCel3/s86ZgAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Let's measure performance of our C program. We know that schedule in file in1.txt takes $2 \cdot 10^9$ iterations. Let's count real time of modelling.</p>
+<p>Let's measure the performance of our C program. We know that the schedule in file in1.txt takes $2 \cdot 10^9$ iterations. Let's count the real time of modelling.</p>
 
 </div>
 </div>
@@ -13508,8 +13508,8 @@ Serial performance: 21974678.925874 iterations per second.
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now let's implement the same algorithm with CUDA. We will start $P$ threads for each group of iterations, and perform $c_1/P$ iterations in each thread (see source code in ising_cuda.cu).</p>
-<p>This program reads schedule in the same format, but takes number of threads as first argument.</p>
-<p>Note. As a result of integer division, we will do each time not 1000000 iterations, but less. But difference is always less than P (number of threads), and we can neglect it (while doing profiling) compared to number of itertions, which is $10^6$.</p>
+<p>This program reads the schedule in the same format, but takes the number of threads as the first argument.</p>
+<p>Note. As a result of integer division, we will do fewer than 1000000 iterations each time. But the difference is always less than P (the number of threads), and we can neglect it (while doing profiling) compared to the number of iterations, which is $10^6$.</p>
 
 </div>
 </div>
@@ -13550,7 +13550,7 @@ Serial performance: 21974678.925874 iterations per second.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>First of all, let's check that CUDA program gets correct results.</p>
+<p>First of all, let's check that the CUDA program gets correct results.</p>
 
 </div>
 </div>
@@ -14144,7 +14144,7 @@ R0Nwdc4AAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now let's see how performance changes with different number of threads.</p>
+<p>Now let's see how performance changes with different numbers of threads.</p>
 
 </div>
 </div>
@@ -14452,8 +14452,8 @@ JZubAAAAAElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>So, with our CUDA program we can achieve performance only 9 times faster, using 200 threads.</p>
-<p>Note. Looks like doing more clever paralellization can get better performance, because GPU has much more that 9 cores. But for that deeper understanding of CUDA and nVIDIA GPU architecture is needed. We can change not only number of "threads", but also number of "blocks". When I tried do that, I got wrong results. Maybe it's because different blocks correspnds to different parts of memory, and work with shared memory is allowed only within one block.</p>
-<p>Also probably we can achieve increase, if we wouldn't retreive all $N^2$ values of spins from GPU after each group of iterations, but instead calculate and store results on GPU and retreive them all in the end. But for this work we have positive reuslt: it works correctly faster than CPU.</p>
+<p>Note. It looks like cleverer parallelization can get better performance, because the GPU has many more than 9 cores. But for that a deeper understanding of CUDA and NVIDIA GPU architecture is needed. We can change not only the number of "threads", but also the number of "blocks". When I tried to do that, I got wrong results. Maybe it's because different blocks correspond to different parts of memory, and work with shared memory is allowed only within one block.</p>
+<p>Also, we can probably achieve an increase if we don't retrieve all $N^2$ values of spins from the GPU after each group of iterations, but instead calculate and store results on the GPU and retrieve them all at the end. But for this work we have a positive result: it works correctly and faster than the CPU.</p>
 
 </div>
 </div>
@@ -14463,7 +14463,7 @@ JZubAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="5.-Phase-transition-in-feromagnetic">5. Phase transition in feromagnetic<a class="anchor-link" href="#5.-Phase-transition-in-feromagnetic">&#182;</a></h1>
+<h1 id="5.-Phase-transition-in-feromagnetic">5. Phase transition in the ferromagnetic case<a class="anchor-link" href="#5.-Phase-transition-in-feromagnetic">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -14472,8 +14472,8 @@ JZubAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now, let's research phase transition in feromagnetic with higher resolution.
-For that, let's create a schedule, which does modelling at temperatures from  2.27 to 2.26 with step $10^{-4}$, and does $6 \cdot 10^8$ iterations for each step. Here we will consider lattice with $N=256$.</p>
+<p>Now, let's research the phase transition in the ferromagnetic case with higher resolution.
+For that, let's create a schedule which does modelling at temperatures from 2.27 to 2.26 with a step of $10^{-4}$, and does $6 \cdot 10^8$ iterations for each step. Here we will consider a lattice with $N=256$.</p>
 <p>Let's do modelling with CUDA.</p>
 
 </div>
@@ -15120,7 +15120,7 @@ AMCQ7AEAAAwFrUeRIapLRlsAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Let's zoom in interval $[2.20, 2.35]$.</p>
+<p>Let's zoom in on the interval $[2.20, 2.35]$.</p>
 
 </div>
 </div>
@@ -15415,9 +15415,9 @@ AAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>At that resolution we see that at segment $[T_c, 2.3]$ experimentally obtained behaviour significantly differs from theoretical. Spontaneous magnetization in eperiment appears before lattice is cooled down to Curie temperature, and when temperature reaches $T_c$, it already is about $0.5$.</p>
-<p>Possible reason of that if $N$ being finite.</p>
-<p>So, with that data we can't try to check asympthotic formula $m \sim (T_c-T)^{1/8}$, because $m$ doesn't tend to zero when $(T_c-T)$ tends to 0.</p>
+<p>At that resolution we see that on the segment $[T_c, 2.3]$ the experimentally obtained behaviour differs significantly from the theoretical behaviour. Spontaneous magnetization in the experiment appears before the lattice is cooled down to the Curie temperature, and when the temperature reaches $T_c$, it already is about $0.5$.</p>
+<p>A possible reason for that is $N$ being finite.</p>
+<p>So, with that data we can't try to check the asymptotic formula $m \sim (T_c-T)^{1/8}$, because $m$ doesn't tend to zero when $(T_c-T)$ tends to 0.</p>
 
 </div>
 </div>
@@ -15436,10 +15436,10 @@ AAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In previous experiment we explained discrepancy of experimental data with theory by finite $N$. Indeed, near Curie point correlation length in Ising model tends to infinity, and the fact that $N$ is finite becomes significant.</p>
+<p>In the previous experiment we explained the discrepancy between experimental data and theory by the finite value of $N$. Indeed, near the Curie point the correlation length in the Ising model tends to infinity, and the fact that $N$ is finite becomes significant.</p>
 <p>Let's do cooling down with the same schedule from $T=5$ to $T=2.5$ for different lattices 
 (making in total $6000N^2$ steps, to ensure that we do the same number of spin swaps per site).</p>
-<p>According to theory, $m(2.5)=0$, because $2.5 > T_c$. So, value of $m$ which we will get will be actually a modelling error.</p>
+<p>According to theory, $m(2.5)=0$, because $2.5 > T_c$. So, the value of $m$ which we will get will actually be a modelling error.</p>
 
 </div>
 </div>
@@ -15724,7 +15724,7 @@ YSEiIn1SWIiISJ8UFiIi0ieFhYiI9ElhISIifVJYiIhIn/4/mN3jzCTIu2UAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As we can see, error actually is decreasing as $N$ grows. Let's assume that $Error = \frac{1}{N^{\alpha}}. Let's build plot in logarythmic scale and estimate parameter $\alpha$.</p>
+<p>As we can see, the error actually is decreasing as $N$ grows. Let's assume that $Error = \frac{1}{N^{\alpha}}$. Let's build a plot on a logarithmic scale and estimate the parameter $\alpha$.</p>
 
 </div>
 </div>
